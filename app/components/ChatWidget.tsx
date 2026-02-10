@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Sparkles } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +45,7 @@ export default function ChatWidget() {
       } else {
         setMessages(prev => [...prev, { type: 'ai', text: `Error: ${data.error}` }]);
       }
-    } catch (err) {
+    } catch {
       setMessages(prev => [...prev, { type: 'ai', text: 'Failed to get response. Please try again.' }]);
     } finally {
       setIsLoading(false);
@@ -123,7 +123,7 @@ export default function ChatWidget() {
                   className="space-y-4 py-8"
                 >
                   <p className="text-gray-600 leading-relaxed">
-                    Hi! I'm an AI assistant trained on Ayush's background. Feel free to ask me anything about his experience, skills, or projects.
+                    Hi! I&apos;m an AI assistant trained on Ayush&apos;s background. Feel free to ask me anything about his experience, skills, or projects.
                   </p>
                   <div className="space-y-2">
                     <p className="text-sm text-gray-500 font-medium">Try asking:</p>
@@ -131,7 +131,7 @@ export default function ChatWidget() {
                       onClick={() => setQuestion("What's Ayush's experience with AI?")}
                       className="block w-full text-left text-sm text-gray-600 hover:text-[#1a2332] transition-colors py-2 px-3 rounded-lg hover:bg-[#1a2332]/5"
                     >
-                      → What's his experience with AI?
+                      → What&apos;s his experience with AI?
                     </button>
                     <button
                       onClick={() => setQuestion("Tell me about STILED")}

@@ -4,10 +4,9 @@ import React from 'react';
 import Image from "next/image";
 import Navbar from './components/Navbar';
 import ChatWidget from './components/ChatWidget';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, MapPin, Briefcase } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 
 interface BulletPoint {
   text: string;
@@ -337,7 +336,7 @@ export default function Home() {
     }, 80);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [fullText.length]);
 
   useEffect(() => {
     // Wait for typing to finish, then toggle to Hindi and back to English once
