@@ -4,7 +4,7 @@ export const personalInfo = {
   phone: "(602)-596-5182",
   university: "Arizona State University (Honors)",
   emails: ["ashejwal@asu.edu", "ayushshejwal2204@gmail.com"],
-  linkedin: "https://linkedin.com/in/ayush2204",
+  linkedin: "https://www.linkedin.com/in/ayush2204/",
   github: "https://github.com/AyushShejwal",
 
   bio: "Computer Science Student at Arizona State University (Honors) with a 3.90/4.00 GPA, passionate about AI/ML, full-stack development, and building innovative solutions.",
