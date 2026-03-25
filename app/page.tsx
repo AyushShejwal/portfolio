@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense } from 'react';
+import React from 'react';
 import Image from "next/image";
 import Navbar from './components/Navbar';
 import ChatWidget from './components/ChatWidget';
@@ -455,9 +455,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#FDF8F3] transition-all duration-500 relative" style={{ filter: isLightOn ? 'none' : 'brightness(0.5)' }}>
-      <Suspense fallback={null}>
-        <Navbar />
-      </Suspense>
+      <Navbar />
       <ChatWidget />
       <div>
         {/* Hero Section */}

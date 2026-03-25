@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import ResumeViewer from './ResumeViewer';
 
-const Navbar = () => {
+const NavbarInner = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -101,4 +101,10 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+const Navbar = () => (
+  <Suspense fallback={null}>
+    <NavbarInner />
+  </Suspense>
+);
+
+export default Navbar;
