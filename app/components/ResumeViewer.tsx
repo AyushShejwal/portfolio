@@ -34,7 +34,7 @@ export default function ResumeViewer({ isOpen, onClose }: ResumeViewerProps) {
             <h2 className="text-white text-xl font-semibold">Resume</h2>
 
             <motion.a
-              href="/Ayush_Resume.pdf"
+              href="/Ayush_Resume_APM.pdf"
               download="Ayush_Shejwal_Resume.pdf"
               className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors font-medium"
               whileHover={{ scale: 1.05 }}
