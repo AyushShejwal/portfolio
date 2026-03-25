@@ -49,12 +49,12 @@ export default function ResumeViewer({ isOpen, onClose }: ResumeViewerProps) {
           <div className="flex-1 overflow-auto flex items-center justify-center">
             <div className="w-full h-full bg-white overflow-hidden">
               <object
-                data="/Ayush_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                data="/Ayush_Resume_APM.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 type="application/pdf"
                 className="w-full h-full"
               >
                 <iframe
-                  src="/Ayush_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  src="/Ayush_Resume_APM.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   className="w-full h-full"
                   title="Resume"
                 />
