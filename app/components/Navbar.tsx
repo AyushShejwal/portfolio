@@ -2,16 +2,22 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 import ResumeViewer from './ResumeViewer';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const isResumeOpen = searchParams.get('resume') === 'true';
+
+  const openResume = () => router.push('/?resume=true');
+  const closeResume = () => router.replace('/');
 
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Resume', action: () => setIsResumeOpen(true) },
+    { name: 'Resume', action: openResume },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -90,7 +96,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <ResumeViewer isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
+      <ResumeViewer isOpen={isResumeOpen} onClose={closeResume} />
     </nav>
   );
 };
