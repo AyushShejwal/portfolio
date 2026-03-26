@@ -343,6 +343,10 @@ const ExperienceSection = () => {
         <div className="hidden md:flex relative items-center justify-center gap-32 max-w-6xl mx-auto">
           {/* Hover hint */}
           <div className="absolute -top-10 left-1/2 -translate-x-1/2 flex items-center gap-2 pointer-events-none select-none">
+            <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="scale-x-[-1]">
+              <path d="M 5 5 Q 15 20, 28 12" stroke="#9ca3af" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+              <path d="M 28 12 L 23 10 M 28 12 L 26 17" stroke="#9ca3af" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
             <span
               className="text-lg text-gray-400"
               style={{ fontFamily: 'var(--font-caveat)' }}
